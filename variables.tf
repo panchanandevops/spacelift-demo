@@ -29,3 +29,11 @@ variable "ubuntu_ami" {
 variable "amazon_linux_ami" {
   default = "ami-066784287e358dad1"  
 }
+
+variable "AWS_ACCESS_KEY_ID" {
+  sensitive = true
+}
+
+variable "AWS_SECRET_ACCESS_KEY" {
+  sensitive = true
+}
