@@ -15,7 +15,7 @@ variable "ssh_key_name" {
 }
 
 variable "SSH_PUB_KEY" {
-  default = "your-ssh-pub-key"
+  default = ""
   sensitive = true
 }
 
