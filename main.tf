@@ -4,14 +4,13 @@ provider "aws" {
 }
 
 
-resource "local_file" "public_key" {
-  content  = tls_private_key.ssh_key.public_key_openssh
+data "local_file" "public_key" {
   filename = var.public_key_path
 }
 
 resource "aws_key_pair" "deployer" {
   key_name   = var.ssh_key_name
-  public_key = tls_private_key.ssh_key.public_key_openssh
+  public_key = file(var.public_key_path)
 }
 
 # Create VPC
