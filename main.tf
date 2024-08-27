@@ -3,14 +3,9 @@ provider "aws" {
 
 }
 
-
-data "local_file" "public_key" {
-  filename = var.public_key_path
-}
-
 resource "aws_key_pair" "deployer" {
   key_name   = var.ssh_key_name
-  public_key = file(var.public_key_path)
+  public_key = var.SSH_PUB_KEY
 }
 
 # Create VPC
