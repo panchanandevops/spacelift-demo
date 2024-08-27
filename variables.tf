@@ -15,11 +15,7 @@ variable "ssh_key_name" {
 }
 
 variable "public_key_path" {
-  default = "./.ssh/terraform_rsa.pub"
-}
-
-variable "private_key_path" {
-  default = "./.ssh/terraform_rsa"
+  default = "~/.ssh/terraform_rsa.pub"
 }
 
 variable "ubuntu_ami" {
