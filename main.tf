@@ -5,7 +5,7 @@ provider "aws" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = var.ssh_key_name
-  public_key = var.SSH_PUB_KEY
+  public_key = file("/mnt/workspace/ssh_key_pub")
 }
 
 # Create VPC

@@ -14,11 +14,6 @@ variable "ssh_key_name" {
   default = "my-ssh-key"
 }
 
-variable "SSH_PUB_KEY" {
-  default = ""
-  sensitive = true
-}
-
 variable "ubuntu_ami" {
   default = "ami-0a0e5d9c7acc336f1"  
 }
