@@ -1,3 +1,2 @@
 # spacelift-demo
 
-ci cd
